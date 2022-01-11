@@ -40,10 +40,6 @@ Built with:
    ```
 4. Deploy!
 
-   ```bash
-   now
-   ```
-5. Eject
    ```
    firebase deploy
    ```
