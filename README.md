@@ -12,8 +12,8 @@ Built with:
 
 1. Install dependencies
 
-   ```bash
-   yarn
+   ```npm
+   install
    ```
 
 2. Fire up the server and watch files
@@ -24,14 +24,27 @@ Built with:
 
 ## Deployment
 
-1. Install the Now CLI
+1. Start app
+   ```
+   npm run start
+   ```
+2. Test
 
-   ```bash
-   yarn add now
+   ```
+   npm test
    ```
 
-2. Deploy!
+3. Build
+   ```
+   npm run build
+   ```
+4. Deploy!
 
    ```bash
    now
    ```
+5. Eject
+   ```
+   firebase deploy
+   ```
+
