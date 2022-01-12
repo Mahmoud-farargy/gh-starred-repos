@@ -17,8 +17,8 @@ const StyledTitleBox = styled.div`
       font-size: 1rem;
     }
   }
-  @media (max-width: 30.87rem) {
-    flex-direction: column;
+  @media (max-width: 670px) {
+    flex-direction: column !important;
     align-items: flex-start;
   }
 `;

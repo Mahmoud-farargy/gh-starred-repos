@@ -9,6 +9,7 @@ const StyledFooter = styled.footer`
     align-items: center;
     justify-content: center;
     .footer--row {
+      text-align:center;
       color: var(--text-black);
       margin-bottom: 0.8rem;
       &:last-of-type {

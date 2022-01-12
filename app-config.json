@@ -1,7 +1,7 @@
 {
     "title": "GHStarredRepos",
     "version": "1.0.0",
-    "description": "An app that fetches the most starred repos repos on Github in the past 30 days. Made for OneTecGroup as a home assignment",
+    "description": "An app that fetches the most starred repos on Github that were created in the last 30 days. Made for OneTecGroup as a home assignment",
     "startYear": "2022",
     "author": "Mahmoud El-Farargy",
     "url": "https://ghstarredrepos.web.app"

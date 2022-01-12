@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Moment from "react-moment";
 import { numFormatter, trimText } from "../../../utilities/index";
+import defaultRepoImg from "../../../design/assets/frlIf.png";
 
 interface ListItemProps {
   repoItem: {
@@ -14,11 +15,11 @@ interface ListItemProps {
     open_issues_count: number;
     created_at: string;
     html_url: string;
-    ref?: React.Ref<HTMLLIElement>;
   };
 }
 
 const ListItem: React.FC<ListItemProps> = ({ repoItem }) => {
+  const imgRef = useRef<HTMLImageElement | null>(null);
   const {
     owner = { avatar_url: "", login: "" },
     name = "",
@@ -28,10 +29,18 @@ const ListItem: React.FC<ListItemProps> = ({ repoItem }) => {
     created_at = "",
     html_url = "",
   } = repoItem;
+  useEffect(() : void => {
+    if(imgRef.current){
+      imgRef.current.addEventListener("error", (): void => {
+        imgRef.current.src = defaultRepoImg;
+      });
+    }
+  }, []);
   return (
     <>
       <div className="repo--img--container">
         <img
+          ref={imgRef}
           src={owner?.avatar_url}
           title="Avatar"
           loading="lazy"

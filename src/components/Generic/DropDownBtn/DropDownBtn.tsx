@@ -37,7 +37,7 @@ const DropDownBtn: React.FC<DropDownBtnProps> = ({
   }, [dropDownOpen, closeDropWhenBlurred]);
   return (
     <DropDownStyle active={dropDownOpen}>
-      <button className="dropdown__button" onClick={() => toggleDropDown()}>
+      <button className="dropdown__button" onClick={() => setDropDownOpen(true)}>
         <label>{ trimText(selectedOption, 12) }</label>
         <IoMdArrowDropdown />
       </button>
